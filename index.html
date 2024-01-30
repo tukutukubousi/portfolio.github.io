@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="icons8-スター-100.png">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:600" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ローディング画面 -->
+  <div id="splash">
+    <div id="splash_logo"><img src="pic/loading.gif" alt="" class="fadeUp"></div>
+  </div>
+  <!-- ヘッダー -->
+  <header>
+    <nav>
+      <a href="#" class="logo">
+        <img src="pic/logo-removebg-preview.png">
+      </a>
+      <div class="menu-group">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Works">Works</a>
+        <a href="#Contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <!-- ホーム画面 -->
+  <section id="Home" class="wrapper">
+    <div class="bbb">
+      <h1>WELCOME</h1>
+      <h1>TO</h1>
+      <h1>MY PORTFOLIO SITE</h1>
+    </div>
+  </section>
+  <!-- About画面 -->
+  <section id="About" class="wrapper">
+    <div class="contents">
+      <h2 class="section-title">About</h2>
+      <div class="flexbox">
+        <div class="flex-item1">
+          <img src="pic/tsukune.png">
+        </div>
+        <div class="flex-item2" class="text">
+          <h1>大城佑茉</h1><br>
+          <div class="flex-item2">
+            <p>
+              25歳。趣味はドライブ、キャンプ、アニメ鑑賞。
+            </p>
+            <p>
+              自分の夢を叶えるために、職業訓練でHTML、CSS、Javascript、PHPのプログラミング言語とWordpressを独学で学習中。
+            </p>
+            <p>
+              写真は愛犬のつくね君。
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- skill -->
+      <h2 class="skill">skill</h2>
+      <div class="skills">
+        <div>
+          <img src="pic/HTML.png">
+        </div>
+        <div>
+          <img src="pic/CSS.png">
+        </div>
+        <div>
+          <img src="pic/php.png">
+        </div>
+        <div>
+          <img src="pic/Javascript.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Works画面 -->
+  <section id="Works" class="wrapper">
+    <div class="contents">
+      <h2 class="section-title">Works</h2>
+      <div class="archive">
+        <div>
+          <a href="松永はかり製作所/index.html" class="item"><img src="pic/松永はかりHP.png"></a>
+          <p>松永はかり製作所</p>
+        </div>
+
+        <div>
+          <a href="紅茶/main.html" class="item">
+            <img src="pic/紅茶HP.png"></a>
+          <p>紅茶紹介</p>
+        </div>
+
+        <div>
+          <a href="anime.html" class="item">
+            <img src="pic/anime.png">
+          </a>
+          <p>丸がランダムに動くページ</p>
+        </div>
+
+        <div>
+          <a href="郵便/yuubin.html" class="item">
+            <img src="pic/郵便番号検索.png"></a>
+          <p>郵便番号から住所を自動入力</p>
+        </div>
+      
+        <div>
+          <a href="MyWalkingApp/index.html" class="item">
+            <img src="pic/MyWorkingApp.png"></a>
+          <p>MyWorkingApp</p>
+        </div>
+        <div>
+          <a href="album.html" class="item"><img src="pic/album.png" alt="no-img"> </a>
+          <p>album</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact画面 -->
+  <section id="Contact" class="wrapper">
+    <div class="contents">
+      <h2 class="section-title">Contact</h2>
+      <div class="Form">
+        <div class="Form-Item">
+          <p class="Form-Item-Label">氏名</p>
+          <input type="text" name="name" class="Form-Item-Input" placeholder="例）山田太郎">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">電話番号</p>
+          <input type="text" name="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label">メールアドレス</p>
+          <input type="email" name="mail" class="Form-Item-Input" placeholder="例）example@gmail.com">
+        </div>
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg">お問い合わせ内容</p>
+          <textarea name="inquiry" class="Form-Item-Textarea"></textarea>
+        </div>
+        <input type="submit" class="Form-Btn" value="送信する">
+      </div>
+      </form>
+  </section>
+  <footer> &copy; yuma ogi</footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/index.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    //スクロールに合わせて文字や画像が出現する
+    ScrollReveal({ reset: true, distance: "200px", duration: 2000, delay: 200 });
+    ScrollReveal().reveal('.flex-item1', { delay: 300, origin: "bottom" });
+    ScrollReveal().reveal('.flex-item2', { delay: 600, origin: "right" });
+    ScrollReveal().reveal('.skills img', { delay: 700, origin: "bottom", interval: 200 });
+    ScrollReveal().reveal('.archive img,.archive p ', { delay: 500, origin: "left", interval: 200 });
+    ScrollReveal().reveal('.Form', { delay: 500, origin: "buttom" });
+  </script>
+</body>
+
+</html>
