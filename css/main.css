@@ -1,0 +1,521 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP");
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+
+/* Loading背景画面設定　*/
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #136dad;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#splash_logo img {
+  width: 600px;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+}
+
+header {
+  display: flex;
+  background-color: #fffbdc;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.title {
+  margin-right: auto;
+  font-family: "Sacramento", cursive;
+}
+
+/* ナビゲーション ・ホーム*/
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 140px;
+  width: 100%;
+  margin: 0;
+}
+
+.menu-group a {
+  font-size: 32px;
+  height: 60px;
+  margin-left: 40px;
+  color: blue;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: "fantasy", "メイリオ";
+}
+
+.menu-group a:hover {
+  text-decoration: underline blue 4px dotted;
+}
+
+.logo {
+  width: 140px;
+  height: 20px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+#Home {
+  background-color: #fffbdc;
+  text-align: center;
+  height: 880px;
+}
+
+#Home.wrapper {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+}
+
+.bbb h1 {
+  animation: color-change 2s linear infinite;
+  margin: 20px;
+  font-family: "fantasy", "メイリオ";
+  font-size: 140px;
+  margin: 0;
+  position: relative;
+}
+
+/* ホーム画面文字色 */
+@keyframes color-change {
+  0%,
+  100% {
+    color: #ff1493;
+  }
+
+  25% {
+    color: #7fff00;
+  }
+
+  50% {
+    color: #0091ea;
+  }
+
+  75% {
+    color: #9400d3;
+  }
+}
+
+h1 {
+  color: white;
+  text-shadow: 2px 1px blue, 3px 2px blue, 3px 3px blue, 4px 4px blue,
+    5px 5px blue, 6px 6px blue, 7px 7px blue, 8px 8px blue, 9px 9px blue,
+    10px 10px blue, 11px 11px blue, 12px 12px blue, 13px 13px blue,
+    14px 14px blue, 6px 6px #3d3d3d, 7px 7px 20px #3d3d3d;
+}
+
+.snow {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  animation: snowFall 10s linear;
+}
+
+/*---------- About ---------*/
+#About {
+  background-color: blue;
+  text-align: center;
+  height: 960px;
+}
+
+#About.wrapper {
+  margin: 0;
+}
+
+.flexbox {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px auto;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.flexbox img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.flexbox h1 {
+  color: white;
+  font-weight: bold;
+  text-align: left;
+}
+
+.flexbox p {
+  text-align: left;
+  color: white;
+  margin: auto;
+}
+
+#About .text {
+  text-align: left;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+}
+
+.skills img {
+  width: 200px;
+  height: 200px;
+}
+
+/*---------- Works ---------*/
+#Works {
+  background-color: orange;
+  text-align: center;
+  height: 960px;
+}
+
+#Works.wrapper {
+  margin: 0;
+}
+
+.contents {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.archive {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.archive img {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  transition-duration: 1s;
+  width: 250px;
+  height: 168px;
+}
+
+.archive img:hover {
+  box-shadow: 20px 20px #000;
+  transform: translateY(-10px);
+}
+
+/*---------- Contact ---------*/
+#Contact {
+  height: 960px;
+  background: paleturquoise;
+  text-align: center;
+}
+
+#Contact.wrapper {
+  margin: 0;
+}
+
+.section-title {
+  color: white;
+  display: inline-block;
+  font-size: 40px;
+  margin-bottom: 60px;
+  border-bottom: dashed 3px white;
+  font-family: "fantasy", "メイリオ";
+}
+
+.skill {
+  display: inline-block;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding: 4px;
+  color: white;
+  font-family: "fantasy", "メイリオ";
+  /* border: 8px solid yellow; */
+  border-bottom: 8px solid yellow;
+}
+
+.archive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer {
+  text-align: center;
+  font-size: 80%;
+}
+
+/* Form */
+.Form {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.Form-Item {
+  padding-bottom: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Form-Item-Label {
+  width: 100%;
+  max-width: 248px;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.Form-Item-Label.isMsg {
+  margin-top: 8px;
+  margin-bottom: auto;
+}
+
+.Form-Item-Label-Required {
+  border-radius: 6px;
+  margin-right: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 48px;
+  display: inline-block;
+  text-align: center;
+  background: #5bc8ac;
+  color: white;
+  font-size: 14px;
+}
+
+.Form-Item-Input {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 48px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: white;
+  font-size: 18px;
+}
+
+.Form-Item-Textarea {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-left: 40px;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 216px;
+  flex: 1;
+  width: 100%;
+  max-width: 410px;
+  background: white;
+  font-size: 18px;
+}
+
+.Form-Btn {
+  border: none;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 280px;
+  display: block;
+  letter-spacing: 0.05em;
+  background: #5bc8ac;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0.3rem;
+  border-bottom: 7px solid #449480;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Form-Btn:hover {
+  margin-top: 35px;
+  border-bottom: 1px solid #449480;
+}
+
+p {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #3d3d3d;
+}
+
+footer {
+  background: paleturquoise;
+}
+
+.scrolldown4 {
+  /*描画位置※位置は適宜調整してください*/
+  position: absolute;
+  bottom: 1%;
+  right: 50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove {
+  0% {
+    bottom: 1%;
+  }
+
+  50% {
+    bottom: 3%;
+  }
+
+  100% {
+    bottom: 1%;
+  }
+}
+
+.bbb {
+  animation-name: fadeDownAnime;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 以下メディアクエリ */
+
+@media only screen and (max-width: 1400px) {
+  .bbb h1 {
+    font-size: 100px;
+  }
+
+  #Home {
+    height: 620px;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .bbb h1 {
+    font-size: 70px;
+  }
+
+  #Home {
+    height: 400px;
+  }
+
+  .menu-group a {
+    font-size: 24px;
+  }
+
+  .skills img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .bbb h1 {
+    font-size: 42px;
+  }
+
+  #Home {
+    height: 320px;
+  }
+
+  .menu-group a {
+    font-size: 13px;
+  }
+
+  .flexbox {
+    flex-direction: column;
+  }
+
+  .flexbox img {
+    text-align: center;
+  }
+
+  .flexbox h1 {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .skills img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  nav img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .bbb h1 {
+    font-size: 48px;
+  }
+
+  #Works {
+    height: 1700px;
+  }
+
+  .archive img {
+    width: 300px;
+    height: 190px;
+  }
+
+  #Contact p {
+    font-size: 16px;
+  }
+}
