@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffd1;
+}
+
+hr {
+  height: 4px;
+  background-color: #3d3d3d;
+  border: none;
+}
+
+table {
+  margin: 16px auto;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #3d3d3d;
+  font-family: serif;
+  text-align: center;
+}
+
+input {
+  font-family: serif;
+}
+
+th {
+  font-family: serif;
+}
+
+table {
+  border-spacing: 20px 16px;
+}
+#search {
+  background: rgb(0, 255, 217);
+  height: 24px;
+  border: none;
+  color: #3d3d3d;
+  font-weight: bold;
+  font-family: serif;
+  cursor: pointer;
+}
+
+#search:hover {
+  opacity: 0.6;
+}
