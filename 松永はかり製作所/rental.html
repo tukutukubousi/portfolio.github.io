@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>松永はかり製作所|トラックスケール</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header id="header">
+      <nav>
+        <div class="parent">
+          <div class="child1">
+            <a href="index.html" class="logo">
+              <img src="pic/hakari_logo.gif" />
+            </a>
+          </div>
+          <div class="child2">
+            <h1>0944-57-5104</h1>
+            <p>(日曜・祝日除く)</p>
+          </div>
+        </div>
+        <div class="menu-group">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="seihin.html">製品案内</a></li>
+            <li><a href="support.html">サポート</a></li>
+            <li><a href="rental.html">レンタル</a></li>
+            <li><a href="gaiyou.html">会社概要</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h2>ロードメーター</h2>
+      <h3>ロードメーター（軸重計）</h3>
+      <p>
+        簡易的な車輌用計量器です
+        前輪と後輪の各車軸ごとに計量します。現場での搬入出管理等にピッタリです
+        貸出期間は５日より承っております
+      </p>
+      <div class="picture">
+        <img src="pic/ロードメーター（軸重計）.jpg" class="picture2" />
+        <img src="pic/ロードメーター（軸重計）2.jpg" class="picture2" />
+      </div>
+      <h2>デジタル台はかり</h2>
+      <h3>大型デジタル台はかり（ひょう量2t～500kg）</h3>
+      <p>
+        大型のデジタル台はかりです
+        パレット、フレコンバック、リサイクル原料等の計量にピッタリです
+        貸出期間は１日より承っております
+      </p>
+      <div class="picture">
+        <img src="pic/大型デジタル台はかり.jpg" />
+        <img src="pic/大型デジタル台はかり2.jpg" />
+      </div>
+      <h3>小型台はかり</h3>
+      <p>各種レンタル用の台はかりです 貸出期間は１日より承っております</p>
+      <div class="picture">
+        <img src="pic/小型台はかり.jpg" />
+        <img src="pic/小型台はかり2.jpg" />
+      </div>
+    </main>
+    <footer>&copy; 株式会社 松永はかり製作所</footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      //スクロールに合わせて文字や画像が出現する
+      ScrollReveal({
+        reset: false,
+        distance: "100px",
+        duration: 2000,
+        delay: 200,
+      });
+      ScrollReveal().reveal(".picture img", { delay: 300, origin: "bottom" });
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/header.js"></script>
+  </body>
+</html>
