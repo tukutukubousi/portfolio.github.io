@@ -1,0 +1,509 @@
+/* ローディング画面*/
+#splash {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  background: #333;
+  text-align: center;
+  color: #fff;
+}
+
+#splash-logo img {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo img {
+  width: 300px;
+}
+
+/*画面遷移アニメーション*/
+.splashbg {
+  display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg {
+  display: block;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: scaleY(0);
+  background-color: #ea2020;
+  /*伸びる背景色の設定*/
+  animation-name: PageAnime;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes PageAnime {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+
+  50.001% {
+    transform-origin: bottom;
+  }
+
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
+
+/*画面遷移の後現れる設定*/
+#container {
+  opacity: 0;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container {
+  animation-name: PageAnimeAppear;
+  animation-duration: 1s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ヘッダー追従 */
+header {
+  background-color: #fff;
+  height: 140px; /*高さ指定*/
+  width: 100%; /*横幅指定*/
+}
+
+#header.fixed {
+  position: fixed; /*fixedを設定して固定*/
+  z-index: 999; /*最前面へ*/
+  top: 0; /*位置指定*/
+  left: 0; /*位置指定*/
+}
+
+nav ul {
+  display: table;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #454f59;
+  width: 800px;
+  height: 50px;
+}
+
+nav li {
+  display: table-cell;
+  min-width: 40px;
+}
+
+nav a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  padding-bottom: 5px;
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+}
+
+nav li:hover {
+  background-color: #ea2020;
+  border-radius: 8px;
+}
+
+.menu-group {
+  margin-bottom: 20px;
+}
+
+.parent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.child2 h1 {
+  margin: 0;
+  color: #ea2020;
+  position: relative;
+}
+
+.child2 h1:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-50%);
+  left: -24px;
+  width: 1.3em;
+  height: 1.3em;
+  background-image: url(../pic/電話の受話器のアイコン素材.png);
+}
+
+/* お知らせ欄 */
+
+.osirasemozi {
+  text-align: center;
+}
+.osirase iframe {
+  width: 800px;
+  height: 150px;
+}
+
+.osirasemozi p {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: bold;
+  color: #454f59;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: linear-gradient(transparent 60%, #ff6 60%);
+}
+
+.child2 p {
+  margin: 0;
+  text-align: center;
+}
+
+/* 大見出し */
+h2 {
+  padding: 0 0.5em;
+  color: #fff;
+  background-color: #36ae37;
+  font-size: 24px;
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  margin-bottom: 4px;
+}
+
+/* 小見出し */
+h3 {
+  color: #494949;
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  padding: 0.3em;
+  margin-bottom: 4px;
+}
+
+h3::before {
+  content: "▼";
+  color: #36ae37;
+}
+
+.triangle::before {
+  content: "●";
+  color: #36ae37;
+}
+
+.honsya img {
+  width: 800px;
+  height: 500px;
+}
+
+.honsya .inner {
+  position: absolute;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.5);
+  font-size: 32px;
+  color: #fff;
+}
+
+.track {
+  margin-left: 20px;
+}
+
+.track a {
+  text-decoration: none;
+  color: #333;
+}
+
+.track a:hover {
+  color: #ea2020;
+  text-decoration: underline;
+}
+
+.track p {
+  font-size: 20px;
+  font-weight: bolder;
+  width: 400px;
+}
+
+.container {
+  display: flex;
+  gap: 32px;
+}
+
+.png {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+/* 説明 */
+p {
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  margin: 4px 0;
+}
+
+/* 写真 */
+.picture {
+  display: flex;
+  justify-content: center;
+  padding: 4px;
+  gap: 100px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture2 {
+  width: 292px;
+}
+
+.pic {
+  width: 40%;
+  margin: auto;
+  display: block;
+}
+
+/* オプション */
+.option {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-item {
+  flex: 1;
+  /* 要素を均等に割る */
+}
+
+/* お問い合わせ */
+#123 {
+  background-color: #000000;
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana,
+    Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic",
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ",
+    Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+  background-image: url(../img/bg_main.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#formWrap {
+  width: 100%;
+}
+
+.form_inner h3 {
+  font-size: 24px;
+  color: #00a0e9;
+  border-bottom: 1px solid #00a0e9;
+  padding-left: 6.25px;
+  padding-bottom: 12.5px;
+  margin-bottom: 50px;
+}
+
+.form_inner p {
+  margin: 25px 0;
+}
+
+.form_inner p a {
+  color: #00a0e9;
+}
+
+#formWrap {
+  width: 800px;
+  margin: 0 auto;
+  color: #555;
+  line-height: 150%;
+  font-size: 85%;
+}
+
+table.formTable {
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table.formTable td,
+table.formTable th {
+  border: 1px solid #ccc;
+  padding: 12.5px;
+}
+
+table.formTable th {
+  widows: 40%;
+  font-weight: normal;
+  background: #efefef;
+  text-align: right;
+}
+
+input,
+textarea {
+  padding: 6.25px 12.5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #cccccc;
+}
+
+.form_require {
+  color: #ed1e79;
+  font-size: 12px;
+}
+
+/* フッター */
+footer {
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* 製品 */
+.link a {
+  display: inline-block;
+  color: #494949;
+  font-size: 120%;
+  transition: color 0.3s;
+}
+
+.link a:hover {
+  color: #00a0e9;
+}
+
+.red {
+  color: #ea2020;
+  font-weight: bold;
+}
+
+.ms {
+  color: #00a0e9;
+  font-weight: bolder;
+}
+
+/*infoエリアをはじめは非表示*/
+#info {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container {
+  max-width: 600px;
+}
+
+/*モーダルのボタンの色を変更したい場合*/
+.modaal-close:after,
+.modaal-close:before {
+  background: #ccc;
+}
+
+.modaal-close:focus:after,
+.modaal-close:focus:before,
+.modaal-close:hover:after,
+.modaal-close:hover:before {
+  background: #666;
+}
+
+table {
+  font-family: "ヒラギノ角ゴ ProN W3", HiraKakuProN-W3, 游ゴシック, "Yu Gothic",
+    メイリオ, Meiryo, Verdana, Helvetica, Arial, sans-serif;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 667px) {
+  .logo img {
+    width: 180px;
+    height: 50px;
+  }
+
+  .track p {
+    width: 200px;
+  }
+
+  .png {
+    margin-left: 5px;
+    margin-top: 30px;
+  }
+
+  .png img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .honsya img {
+    width: 400px;
+    height: 400px;
+  }
+  .child2 h1 {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+
+  .child2 h1:before {
+    transform: translateY(-50%);
+    left: -18px;
+    width: 1em;
+    height: 1em;
+  }
+
+  .child2 h1 {
+    font-size: 16px;
+  }
+
+  .child2 p {
+    font-size: 10px;
+    margin-right: 20px;
+  }
+  .menu-group ul {
+    width: 370px;
+  }
+
+  .menu-group li {
+    font-size: 10px;
+  }
+
+  .picture {
+    flex-flow: column;
+  }
+
+  .container p {
+    font-size: 16px;
+  }
+}

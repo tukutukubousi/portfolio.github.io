@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>松永はかり製作所|トラックスケール</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="parent">
+        <div class="child1">
+          <a href="index.html" class="logo">
+            <img src="pic/hakari_logo.gif">
+          </a>
+        </div>
+        <div class="child2">
+          <h1>0944-57-5104</h1>
+          <p>(日曜・祝日除く)</p>
+        </div>
+      </div>
+      <div class="menu-group">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="seihin.html">製品案内</a></li>
+          <li><a href="support.html">サポート</a></li>
+          <li><a href="rental.html">レンタル</a></li>
+          <li><a href="gaiyou.html">会社概要</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="123">
+    <div id="contents_wrap">
+
+      <div id="formWrap">
+        <div class="form_inner">
+          <p>弊社への各種お問い合わせは、<a href="privacy.html">「個人情報保護方針」</a>に同意の上、以下のフォームよりお送りください。</p>
+          <form method="post" action="mail.php">
+            <table class="formTable">
+              <tr>
+                <th>お名前</th>
+                <td><input size="70" type="text" name="お名前" required /> <span class="form_require">※必須</span></td>
+              </tr>
+              <tr>
+                <th>会社名</th>
+                <td><input size="70" type="text" name="会社名" /> <span class="form_require">※必須</span></td>
+              </tr>
+              <tr>
+                <th>部署/役職</th>
+                <td><input size="70" type="text" name="部署役職" /></td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><input size="70" type="text" name="電話番号" /></td>
+              </tr>
+              <tr>
+                <th>メールアドレス</th>
+                <td><input size="70" type="text" name="Email" required /><span class="form_require">※必須</span></td>
+              </tr>
+              <tr>
+                <th>性別</th>
+                <td><input type="radio" name="性別" value="男" /> 男　
+                  <input type="radio" name="性別" value="女" /> 女
+                </td>
+              </tr>
+              <tr>
+                <th>お問い合わせ内容<br /></th>
+                <td><textarea name="お問い合わせ内容" cols="70" rows="10"></textarea></td>
+              </tr>
+            </table>
+            <p align="center">
+              <input type="submit" value="　 送信 　" />　
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <footer> &copy; 株式会社 松永はかり製作所</footer>
+</body>
+
+</html>
