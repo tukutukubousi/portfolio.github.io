@@ -1,0 +1,451 @@
+@import url(sanitize.css);
+
+/* 共通設定 */
+body {
+    font-family: 'Shippori Mincho', serif;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    transition: color .5s;
+}
+
+a:hover {
+    color: rgba(8, 125, 135, 60%);
+}
+
+.line {
+    background: linear-gradient(transparent 60%, rgba(8, 125, 135, 60%)80%);
+}
+
+.title {
+    background: linear-gradient(transparent 10%, rgba(170, 134, 75, 60%)80%);
+    font-size: 24px;
+    text-align: left;
+}
+
+/* ファーストビュー */
+.top {
+    padding: 0 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-left: 7px dotted #d7c8b0;
+    background-color: #f0f0f0;
+    outline: 3px solid #d7c8b0;
+    outline-offset: 0.5em;
+    position: relative;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.top::after {
+    content: '';
+    position: absolute;
+    right: calc(-0.5em - 3px);
+    top: calc(-0.5em - 3px);
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: #d7c8b0 #fff #d7c8b0;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* メインコンテンツ */
+.brew {
+    border-bottom: solid #1e366a 1px;
+    margin-bottom: 2.5em;
+}
+
+.box {
+    display: inline-block;
+    margin: 24px auto;
+    background-color: #d7c8b0;
+    padding: 2.5em 2em 2em;
+    position: relative;
+    width: 70%;
+}
+
+.box .box-title {
+    background-color: rgba(255, 255, 255, .1);
+    border-left: 2px dotted rgba(0, 0, 0, .1);
+    border-right: 2px dotted rgba(0, 0, 0, .1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+    padding: 10px 20px;
+    line-height: 1;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+}
+
+.heading {
+    color: #666;
+    padding-top: 40px;
+    border-bottom: solid #1e366a 1px;
+    padding-bottom: 8px;
+
+}
+
+.list {
+    color: #666;
+    border-bottom: solid #1e366a 1px;
+    padding: 1em 0 1em 1.5em;
+    margin-bottom: 8em;
+    list-style-type: decimal;
+    margin-left: 24px;
+    text-align: left;
+}
+
+.list,
+.list-item {
+    line-height: 2.5;
+    padding: 0.5em 0;
+}
+
+.list-item {
+    font-size: 18px;
+}
+
+/* アコーディオンパネル */
+h2 {
+    margin-bottom: 16px;
+}
+
+.qa {
+    margin-top: 5em;
+}
+
+.question {
+    margin-top: 5em;
+    font-size: 20px;
+}
+
+.anser {
+    font-size: 20px;
+}
+
+.anser2 {
+    margin-top: 8px;
+    margin-left: 24px;
+    width: 80%;
+}
+
+.question:first-letter {
+    font-size: 32px;
+    color: blue;
+}
+
+.anser:first-letter {
+    font-size: 32px;
+    color: red;
+}
+
+.accordion_area .accordion_one .ac_header {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1.5rem 4rem 1.5rem 2rem;
+    position: relative;
+    z-index: +1;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.accordion_area .accordion_one .ac_header:not(.open):hover {
+    background-color: #f1f8ff;
+}
+
+.accordion_area .accordion_one:nth-child(odd) .ac_header {
+    background-color: #f5f5f5;
+}
+
+.accordion_area .accordion_one:nth-child(odd) .ac_header:not(.open):hover {
+    background-color: #f1f8ff;
+}
+
+.accordion_area .accordion_one .ac_header .i_box {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.accordion_area .accordion_one .ac_header .i_box:before,
+.accordion_area .accordion_one .ac_header .i_box:after {
+    position: absolute;
+    content: "";
+    margin: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.accordion_area .accordion_one .ac_header .i_box:before {
+    border-top: 2px solid #014897;
+    width: 20px;
+    height: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.accordion_area .accordion_one .ac_header .i_box:after {
+    border-left: 2px solid #014897;
+    width: 0;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 9px;
+    transition: .3s;
+}
+
+.accordion_area .accordion_one .ac_header.open .i_box:after {
+    height: 0;
+}
+
+.accordion_area .accordion_one .ac_inner {
+    display: none;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.p-faq__headinner {
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.p-faq__headinner::before {
+    position: absolute;
+    left: 0;
+    content: "Q．";
+    color: #09357f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-faq__headinner p.p-faq__q-txt {
+    font-size: 20px;
+}
+
+
+.p-faq__bodyinner {
+    display: block;
+    padding-left: 35px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.p-faq__bodyinner::before {
+    position: absolute;
+    left: 0;
+    content: "A．";
+    color: #de0000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.p-faq__bodyinner p.p-faq__a-txt {
+    font-size: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.s_section {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 2rem 10px;
+}
+
+.gutter>*:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+ul.list-disc {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.list-disc__item {
+    margin-left: 1.5em;
+    list-style: disc;
+}
+
+a._a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 2.0em 1.0em;
+    border: 1px solid #222222;
+    background: linear-gradient(to right, #ffffff 50%, #222222 50%);
+    background-size: 200% auto;
+    box-sizing: border-box;
+    color: #222222;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+}
+
+a._a:after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #222222;
+    border-bottom: 1px solid #222222;
+}
+
+a._a:hover {
+    color: #ffffff;
+    background-position: -100% 0;
+}
+
+/* リストの配置制御 */
+.kind {
+    margin-top: 2em;
+    padding: 0.4em 0.5em;
+    color: #494949;
+    font-size: 24px;
+    background: #f4f4f4;
+    border-left: solid 5px rgba(8, 125, 135, 60%);
+    border-bottom: solid 3px #d7d7d7;
+}
+
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.kind-txt {
+    width: 100%;
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+.list-2 {
+    width: 100%;
+    border: 2px solid #087d87;
+}
+
+.list-2 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    background-color: #087d87;
+    color: #fff;
+    font-weight: 600;
+}
+
+.list-2 ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 1em 1em 1em 2.5em;
+}
+
+.list-2 li {
+    padding: .3em .3em .3em 0;
+}
+
+.list-2 li::marker {
+    color: #087d87;
+    font-size: 1.1em;
+}
+
+/* フッター */
+footer {
+    margin-top: 3em;
+    text-align: right;
+    font-size: 20px;
+}
+
+/* メディアクエリ設定 */
+@media screen and (min-width: 880px) {
+    .column {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .kind-txt {
+        width: 60%;
+    }
+
+    .list-2 {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .accordion_area .accordion_one .ac_header {
+        padding: 1.5rem 2rem 1.5rem 1.0rem;
+    }
+
+    .accordion_area .accordion_one .ac_header .i_box {
+        right: 0.8rem;
+        width: 15px;
+        height: 15px;
+        margin-top: -7px;
+    }
+
+    .accordion_area .accordion_one .ac_header .i_box:before {
+        width: 15px;
+    }
+
+    .accordion_area .accordion_one .ac_header .i_box:after {
+        height: 15px;
+        right: 7px;
+    }
+
+    .accordion_area .accordion_one .ac_inner {
+        padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .p-faq__headinner {
+        padding-left: 25px;
+    }
+
+    .p-faq__headinner::before {
+        font-size: 14px;
+    }
+
+    .p-faq__headinner {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .p-faq__bodyinner {
+        padding-left: 25px;
+    }
+
+    .p-faq__bodyinner::before {
+        font-size: 14px;
+    }
+}

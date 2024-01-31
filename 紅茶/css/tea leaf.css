@@ -1,0 +1,160 @@
+@import url(sanitize.css);
+
+/* 共通設定 */
+body {
+    font-family: 'Shippori Mincho', serif;
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    transition: color .5s;
+}
+
+a:hover {
+    color: rgba(8, 125, 135, 60%);
+}
+
+/* ファーストビュー */
+.top {
+    padding: 0 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-left: 7px dotted #d7c8b0;
+    background-color: #f0f0f0;
+    outline: 3px solid #d7c8b0;
+    outline-offset: 0.5em;
+    position: relative;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.top::after {
+    content: '';
+    position: absolute;
+    right: calc(-0.5em - 3px);
+    top: calc(-0.5em - 3px);
+    border-width: 0 20px 20px 0;
+    border-style: solid;
+    border-color: #d7c8b0 #fff #d7c8b0;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* メインコンテンツ */
+.column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.items {
+    width: 100%;
+}
+
+.info-list {
+    width: 40%;
+}
+
+.info :hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+/* モーダルウィンドウ部分 */
+.hide-area {
+    display: none;
+}
+
+.explanation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ex-txt .ex-img {
+    width: 100%;
+}
+
+/* フッター */
+footer {
+    margin-top: 16px;
+    text-align: right;
+    font-size: 20px;
+}
+/* メディアクエリ設定 */
+@media only screen and (min-width:1024px) {
+    .column {
+        display: grid;
+        width: 960px;
+        height: 480px;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px 20px;
+    }
+
+    .explanation {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .ex-txt .ex-img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:1023px) {
+    .column {
+        display: grid;
+        width: 620px;
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px 20px;
+    }
+
+    .explanation {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ex-txt .ex-img {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:660px) {
+    .column {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .explanation {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 350px;
+    }
+
+    #img-1 {
+        width: 100%;
+    }
+
+    #img-2 {
+        width: 100%;
+    }
+
+    #img-3 {
+        width: 100%;
+    }
+
+    #img-4 {
+        width: 100%;
+    }
+
+    #img-5 {
+        width: 100%;
+    }
+
+}

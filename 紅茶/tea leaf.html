@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/css/modaal.min.css
+        " rel="stylesheet">
+    <link rel="stylesheet" href="css/tea leaf.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>リーフティーの等級区分</title>
+</head>
+
+<body>
+    <!-- このページの目標:グリッドレイアウトの使用、モーダルウィンドウの実装 -->
+
+    <!-- ファーストビュー -->
+    <br>
+    <h2 class="top">リーフティーの等級区分</h2><br><br>
+        <p>紅茶は仕上げの工程でふるいにかけられ、その形状、大きさによって区分されます。</p>
+        <p>これを一般に紅茶の等級区分といいますが、それは茶葉の「大きさ」と「外観」を表すだけで、品質の良し悪しを表したものではありません。</p>
+        <p>今回は5種類の等級をご紹介します。</p>
+        <p>今回ご紹介できなかった物もあるので、気になる方は是非ご自身で調べてみてください。</p>
+        <p>下の画像をクリックすると、説明文が表示されます。</p>
+
+<!-- メインコンテンツ -->
+    <div class="column">
+        <div class="items" id="item-1">
+            <div class="info-list">
+                <a href="#info-1" class="info">
+                    <dd>
+                        <img src="img/op.png" alt="">
+                    </dd>
+                </a>
+            </div>
+            <p>OP オレンジ・ペコー</p>
+        </div>
+
+        <div class="items" id="item-2">
+            <div class="info-list">
+                <a href="#info-2" class="info">
+                    <dd>
+                        <img src="img/bop.png" alt="">
+                    </dd>
+                </a>
+            </div>
+            <p> BOP ブロークン・オレンジ・ペコー</p>
+        </div>
+
+        <div class="items" id="item-3">
+            <div class="info-list">
+                <a href="#info-3" class="info">
+                    <dd>
+                        <img src="img/bopf.png" alt="">
+                    </dd>
+                </a>
+            </div>
+            <p>BOPF BOPファニングス</p>
+        </div>
+
+        <div class="items" id="item-4">
+            <div class="info-list">
+                <a href="#info-4" class="info">
+                    <dd>
+                        <img src="img/d.png" alt="">
+                    </dd>
+                </a>
+            </div>
+            <p>D ダスト</p>
+        </div>
+
+        <div class="items" id="item-5">
+            <div class="info-list">
+                <a href="#info-5" class="info">
+                    <dd>
+                        <img src="img/ctc.png" alt="">
+                    </dd>
+                </a>
+            </div>
+            <p>CTC シー・ティー・シー</p>
+        </div>
+    </div>
+
+
+    <!-- モーダルウィンドウ -->
+    <section id="info-1" class="hide-area">
+        <h2> OP オレンジ・ペコー:</h2>
+        <div class="explanation">
+            <div class="ex-txt">
+                <p>一般に細かい針状の長い葉で、葉肉は薄く、しばしば橙黄色の芯芽（ティップ）を含みます。</p>
+                <p>浸出した水色は明るくうすいものが多く、香味が強いのが特徴です。</p>
+                <p> ペコーは白いうぶ毛のついた茶の芯芽を意味する中国語の白毫（パイハウ）が語源です。</p>
+            </div>
+            <div class="ex-img">
+                <img src="img/op-b.png" id="img-1" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="info-2" class="hide-area">
+        <h2> BOP ブロークン・オレンジ・ペコー:</h2>
+        <div class="explanation">
+            <div class="ex-txt">
+                <p>需要が最も多いものです。</p>
+                <p>リーフ・スタイルのどの茶よりも葉のサイズが小さく、もっとも多く芯芽を含み、よく揉まれています。</p>
+                <p>水色も濃く、強く、香味も強い。</p>
+            </div>
+            <div class="ex-img">
+                <img src="img/bop-b.png" id="img-2" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="info-3" class="hide-area">
+        <h2>BOPF BOPファニングス:</h2>
+        <div class="explanation">
+            <div class="ex-txt">
+                <p>BOPよりも小型で、はるかに水色は濃く早く抽出されます。</p>
+                <p>ブレンドに多用される上級品。ティーバッグにも使われます。</p>
+                <p>BOPFよりやや大きめのものを「PF（ペコ―ファニングス）」、やや小さめのものを「F（ファニングス）」といいます。</p>
+            </div>
+            <div class="ex-img">
+                <img src="img/bopf-b.png" id="img-3" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="info-4" class="hide-area">
+        <h2>D ダスト:</h2>
+        <div class="explanation">
+            <div class="ex-txt">
+                <p>葉のサイズがもっとも小さいもの。</p>
+                <p>良質のものは、良質でかつ浸出が早く、香味もより強いことから高値で取引される。</p>
+                <p>クズ、チリ、ホコリなどの意味ではないので注意。</p>
+            </div>
+            <div class="ex-img">
+                <img src="img/d-b.png" id="img-4" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="info-5" class="hide-area">
+        <h2>CTC シー・ティー・シー:</h2>
+        <div class="explanation">
+            <div class="ex-txt">
+                <p> CTCとは、Crush（押しつぶす）・Tear（ひきさく）・Curl（丸めて粒にする）の略。</p>
+                <p>短時間で抽出できるように開発された製法で、茶葉の外観は特徴的な粒状をしています。</p>
+                <p>CTCは製法名なので、CTC BOPやCTC
+                    PFのように、サイズに応じてその後にグレード名がつけられます。</p>
+            </div>
+            <div class="ex-img">
+                <img src="img/ctc-b.png" id="img-5" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- フッター -->
+    <footer>
+        <a href="main.html">TOPページへ戻る</a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/modaal@0.4.4/dist/js/modaal.min.js
+    "></script>
+    <script src="js/tea leaf.js"></script>
+</body>
+
+</html>

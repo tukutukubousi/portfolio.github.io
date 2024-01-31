@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-subtle.css"
+        href="https://unpkg.com/tippy.js@5.0.3/animations/shift-toward-extreme.css">
+    <link rel="stylesheet" href="css/Ceylon tea.css">
+    <link rel="icon" href="img/favicon.ico">
+    <title>セイロンティーについて</title>
+</head>
+
+<body>
+    <!-- このページの目標:display flexの扱い方、ツールチップの実装、表の作成 -->
+
+    
+<!-- ファーストビュー -->
+    <br>
+    <h2 class="top">セイロンティーについて</h2><br><br>
+
+
+    <div class="column">
+        <div>
+            <img id="head-img" src="img/Sri_Lanka_Teeplantage.jpg" alt="スリランカ">
+        </div>
+        <div class="heading">
+            <p>セイロンティーとは、スリランカの旧国名『セイロン国』の名称の名残で、インド茶や中国茶のように“スリランカ産の紅茶”の総称となります。</p>
+            <p>セイロンティーには、『セイロン・セブン・カインズ（Ceylon Seven Kinds）』と呼ばれる世界的にも有名な7つの産地があり、それぞれが全く異なる特徴や魅力を持った紅茶となっています。</p>
+            <p>このページでは、
+                <span class="line"><a href="#Uva">ウバ</a></span>、
+                <span class="line"><a href="#Nuwara Eliya">ヌワラエリア</a></span>、
+                <span class="line"><a href="#Dimbulla">ディンブラ</a></span>、
+                <span class="line"><a href="#Kandy">キャンディ</a></span>、
+                <span class="line"><a href="#Ruhuna">ルフナ</a></span>、
+                <span class="line"><a href="#Sabaragamuwa">サバラガムワ</a></span>、
+                <span class="line"><a href="#Uda Pussellawa">ウダプッセラワ</a></span>
+                の7種類と、標高がもたらす茶葉の魅力をご紹介します。
+            </p>
+        </div>
+    </div>
+
+<!-- メインコンテンツ -->
+    <span class="title" id="Uva">ウバ（Uva）</span>
+    <div class="column">
+        <div class="text">
+            <p>世界三大紅茶の一つとしても知られる「ウバ」は、スリランカ南東部にある標高1,800メートルのハイグロウン（高地）の産地です。</p>
+            <p>爽やかな香り、サロメチール香と呼ばれるメントール系の香りの「ウバフレーバー」が特徴で、輝く水色の美しさとともに良質のものほど特徴が強くなります。</p>
+            <p>メントール香はミルクティーにすることでフルーティーに変化し、深いコクと爽やかな香りのミルクティーが楽しめます。</p>
+        </div>
+        <div class="img">
+            <img src="img/uva-1-300x300.jpg" alt="ウバ">
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="teagarden">【ウバハイランド茶園】</p>
+        <p>ウバの銘茶園・御三家のひとつ。標高は1,200メートル。</p>
+        <p>メントール香が出るのは1年に1カ月程度で、味と香りがベストな状態となるのは2週間ほどしかありません。フレーバリーシーズンだけの香りと、上質なウバの証である金色のコロナリングが特徴。</p>
+    </div><br>
+
+
+    <span class="title" id="Nuwara Eliya">ヌワラエリア（Nuwara Eliya）</span>
+    <div class="column">
+        <div class="text">
+            <p>「ヌワラエリア」は、標高1,800～2,000メートルというスリランカで最も高い場所にある産地です。</p>
+            <p>避暑地としても発展してきた地域ですが、昼夜の温度差は激しく、この温度差によって独特の渋みと高貴な香りを生み出しています。</p>
+            <p>自生するユーカリやミントの風味も加わり、「セイロンティーのシャンパン」と称される繊細で爽やかな風味の紅茶となっています。</p>
+        </div>
+        <div class="img">
+            <img src="img/nuwaraeliya-300x300.jpg" alt="ヌワラエリア">
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="teagarden">【ラバーズリープ茶園】</p>
+        <p>ヌワラエリアのトップ茶園で、数々の賞を受賞している人気茶園。</p>
+        <p>標高は1,910メートル、平均気温15度。</p>
+        <p>旬の時期には夜間に製茶を行い発酵の絶妙なコントロールと環境の管理によって、爽やかなキレの中にほんのりと甘さを感じる仕上げとしています。</p>
+    </div><br>
+
+    <span class="title" id="Dimbulla">ディンブラ（Dimbulla）</span>
+    <div class="column">
+        <div class="text">
+            <p>「ディンブラ」は、標高1,200～1,600メートルのハイグロウン（高地）の産地で、紅茶の栽培に最適なスリランカのなかでも恵まれた土壌と気候条件を有しています。</p>
+            <p>フレーバリーシーズンの12～2月の茶葉は、「セイロン茶の王者」にふさわしいバラや柑橘系の香りと、しっかりとした輪郭のあるキレの良い渋味が特徴となっています。</p>
+        </div>
+        <div class="img">
+            <img src="img/dimbula-300x300.jpg" alt="ヌワラエリア">
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="teagarden">【グレートウエスタン茶園】</p>
+        <p>ディンブラの銘茶園・御三家のひとつで、芳香の素らしさに特徴をもつ茶園。</p>
+        <p>ゴージャスな花の香りは、フレーバリーシーズン特有の仕上げによるもので、夜9時頃の低温を活かした発酵も、良い香りの秘密となっています。</p>
+    </div><br>
+
+
+    <span class="title" id="Kandy">キャンディ（Kandy）</span>
+    <div class="column">
+        <div class="text">
+            <p>セイロン紅茶の発祥の地として有名な「キャンディ」は、標高600～1,200メートルのミディアムグロウン（中地）の産地です。</p>
+            <p>バランスの良い渋みとコクで飲みやすく、ほんのりと感じるモルティ―フレーバーが特徴となっています。</p>
+        </div>
+        <div class="img">
+            <img src="img/kandy-300x300.jpg" alt="キャンディ">
+        </div>
+    </div>
+
+    <span class="title" id="Ruhuna">ルフナ（Ruhuna）</span>
+    <div class="column">
+        <div class="text">
+            <p>「ルフナ」は、標高200～700メートルほどのローグロウン（低地）の産地で、セイロンティーのなかで最も低い地域で栽培されています。</p>
+            <p>ローグロウンならではの濃い赤茶色の水色と、濃厚な味わいが特徴で、個性的ながらも飲みやすい紅茶となっています。</p>
+            <p>ストレートはもちろん、独自の香りや甘みが残るミルクティーでもおすすめです。</p>
+        </div>
+        <div class="img">
+            <img src="img/ruhuna-300x300.jpg" alt="ルフナ">
+        </div>
+    </div>
+
+    <div class="box">
+        <p class="teagarden">【ルンビニ茶園】</p>
+        <p>標高500mのルフナの中では標高が高い位置にある。</p>
+        <p>ルフナ茶の常識を覆し、今やセイロン紅茶をリードする存在。</p>
+        <p>圧倒的な品質と鮮度で、ミルクティーにしても紅茶の風味が消えません。</p>
+    </div><br>
+
+    <span class="title" id="Sabaragamuwa">サバラガムワ（Sabaragamuwa）</span>
+    <div class="column">
+        <div class="text">
+            <p>「サバラガムワ」は、数年前までは「ルフナ」とされていた産地です。</p>
+            <p>標高や気候の違いによってルフナとは異なる産地として新たに加えられました。</p>
+
+            <!-- ツールチップ -->
+            <p><span class="cap"
+                    data-tippy-content="「CTC製法」は押しつぶす(Crush)、引きちぎる(Tear)、丸める(Curl)の3工程をひとつの機械で行うことで作業効率を向上させた、大量生産向きの製法です。">C.T.C製法</span>
+                によってコクや深みが増しますが、インド茶よりもライトですっきりとした味わい特徴です。</p>
+
+        </div>
+        <div class="img">
+            <img src="img/sabara-300x300.jpg" alt="サバラガムワ">
+        </div>
+    </div>
+
+    <span class="title" id="Uda Pussellawa">ウダプッセラワ（Uda Pussellawa</span>
+    <div class="column">
+        <div class="text">
+            <p>ヌワラエリアとウバの中間にある「ウダプッセワラ」は、風味の違いによって新しく独立した産地です。</p>
+            <p> 標高は1,500メートルほどに位置するハイグロウン（高地）の産地で、繊細さのなかに口当たりの良いマイルドさが感じられます。</p>
+            <p>喉ごしの良さや、ほのかに香るメントール香が特徴です。</p>
+        </div>
+        <div class="img">
+            <img src="img/uda-1-300x300.jpg" alt="ウダプッセラワ">
+        </div>
+    </div>
+
+
+    <span class="title">標高がもたらす茶葉の魅力</span>
+<!-- 表作成 -->
+    <table>
+        <tr>
+            <th><br></th>
+            <th>茶園の標高</th>
+            <th>主な産地</th>
+        </tr>
+        <tr>
+            <td>ハイグロウン【高地】</td>
+            <td>1,200～2,000メートル</td>
+            <td>ウバ、ヌワラエリア、ディンブラ、ウダプッセラワ</td>
+        </tr>
+        <tr>
+            <td>ミディアムグロウン【中地】</td>
+            <td>600～1,200メートル</td>
+            <td>キャンディ</td>
+        </tr>
+        <tr>
+            <td>ローグロウン【低地】</td>
+            <td>600メートル以下</td>
+            <td>ルフナ、サバラガムワ</td>
+        </tr>
+    </table>
+
+    <!-- 表説明 -->
+    <div style="margin-top: 16px;">
+        <p> ― ハイグロウンティー【高地産の茶葉】は個性の豊かな茶葉があり、深いコクや渋みに加えて、強い香りが特徴。</p>
+        <p> ― ミディアムグロウンティー【中地産の茶葉】はバランスの良い紅茶で、クセが少なく飲みやすい。
+        </p>
+        <p> ― ローグロウンティー【低地産の茶葉】はコクや甘みがあり、濃厚でありながら飲みやすい。</p>
+    </div>
+
+    <img class="elevation" src="img/Seven-Kinds-1024x455.png" alt="標高">
+
+    <!-- フッター -->
+    <footer>
+        <a href="main.html" class="back">TOPページへ戻る</a>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1"></script>
+    <script src="https://unpkg.com/tippy.js@5"></script>
+    <script src="js/Ceylon tea.js"></script>
+</body>
+
+</html>
